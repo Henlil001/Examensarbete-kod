@@ -20,13 +20,14 @@ namespace dotnet_api.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllPlayers()
         {
-
-            return Ok(await _logic.GetAllPlayersAsync());
+            var players = await _logic.GetAllPlayersAsync();
+            return Ok(new { Players = players, players.Count });
         }
         [HttpGet("{searchVal}")]
         public async Task<IActionResult> SearchPlayerByName(string searchVal)
         {
-            return Ok(await _logic.SearchPlayerAsync(searchVal));
+            var result = await _logic.SearchPlayerAsync(searchVal);
+            return Ok(new { Players = result, result.Count });
         }
         [HttpPost]
         public async Task<IActionResult> AddPlayer([FromBody] AddPlayerDTO player)

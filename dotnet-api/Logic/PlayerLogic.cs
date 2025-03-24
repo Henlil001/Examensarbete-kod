@@ -45,7 +45,7 @@ namespace dotnet_api.Logic
         {
             return await _context.HockeyPlayers
             .Where(h => h.FullName.Contains(searchVal))
-            .OrderBy(h => h.Club)
+            .OrderBy(h => h.FullName)
             .AsNoTracking()
             .ToListAsync();
         }

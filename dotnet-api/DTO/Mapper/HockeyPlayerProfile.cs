@@ -5,7 +5,7 @@ namespace dotnet_api.DTO.Mapper
 {
     public class HockeyPlayerProfile : Profile
     {
-        protected HockeyPlayerProfile()
+        public HockeyPlayerProfile()
         {
             CreateMap<AddPlayerDTO, HockeyPlayer>();
         }
