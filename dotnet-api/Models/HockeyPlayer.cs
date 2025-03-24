@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string FullName { get; set; }
-        public int HightInCmty { get; set; }
+        public int HightInCm { get; set; }
         public int WeightInKg { get; set; }
         public string Club { get; set; }
         public string Position { get; set; }
