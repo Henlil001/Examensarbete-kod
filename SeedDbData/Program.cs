@@ -10,7 +10,7 @@ namespace SeedDbData
         {
 
             var options = new DbContextOptionsBuilder<SeedDataDbContext>()
-                .UseSqlServer("Server=tcp:examensarbeteserver.database.windows.net,1433;Initial Catalog=Examensarbete;Persist Security Info=False;User ID=henrik123;Password=password123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;").Options;
+                .UseSqlServer("").Options;
 
             using var context = new SeedDataDbContext(options);
 
